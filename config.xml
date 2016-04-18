@@ -12,10 +12,9 @@
     <preference name="Orientation" value="portrait" />
     <preference name="EnableViewportScale" value="true" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <!-- TODO: Needed for now: http://stackoverflow.com/a/30992364 -->
-    <!-- <plugin name="cordova-plugin-whitelist" version="1" /> -->
-    <plugin name="cordova-plugin-whitelist" version="1.0.0" />
     <access origin="*" />
+    <access origin="https://apprtc.appspot.com/*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -28,7 +27,7 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <hook type="after_platform_add" src="hooks/iosrtc-swift-support.js" />
+        <hook src="hooks/iosrtc-swift-support.js" type="after_platform_add" />
     </platform>
     <plugin name="cordova-plugin-crosswalk-webview" spec="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview" />
     <plugin name="cordova-plugin-device" version="^1.0.1" />
